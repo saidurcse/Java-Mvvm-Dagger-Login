@@ -11,108 +11,64 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/EmailSignUp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/ic_launcher_background">
+            android:layout_height="40dp"
+            android:background="#f2f2f2"
+            android:layout_marginStart="40.7dp"
+            android:layout_marginEnd="40.7dp"
+            android:layout_marginTop="250dp"
+            android:drawableLeft="@drawable/image_email"
+            android:drawablePadding="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:hint="@string/email_id"
+            android:inputType="textEmailAddress"
+            android:text="@={viewModel.email}"
+            android:textSize="11.2sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/PasswordSignUp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!--<FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/frameLayout"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+        <EditText
+            android:id="@+id/PasswordSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#f2f2f2"
+            android:layout_marginStart="40.7dp"
+            android:layout_marginEnd="40.7dp"
+            android:layout_marginTop="40dp"
+            android:drawableLeft="@drawable/image_password"
+            android:drawablePadding="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:text="@={viewModel.password}"
+            android:textSize="11.2sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/SignUpConfirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/EmailSignUp" />
 
-            <ImageView
-                    android:layout_width="303.7dp"
-                    android:layout_height="497dp"
-                    android:layout_marginBottom="48.3dp"
-                    android:layout_marginEnd="21dp"
-                    android:layout_marginStart="35.3dp"
-                    android:layout_marginTop="94.7dp"
-                    android:background="@drawable/dolphin_logo"/>
-
-            <ImageView
-                    android:layout_width="165.3dp"
-                    android:layout_height="56.3dp"
-                    android:layout_marginBottom="471dp"
-                    android:layout_marginEnd="101.3dp"
-                    android:layout_marginStart="93.3dp"
-                    android:layout_marginTop="112.7dp"
-                    android:background="@drawable/tibot_logo"/>
-
-            <TextView
-                    android:layout_width="169.7dp"
-                    android:layout_height="19.7dp"
-                    android:layout_marginEnd="98.7dp"
-                    android:layout_marginStart="97.7dp"
-                    android:layout_marginTop="192dp"
-                    android:text="@string/Sign_in_to_Get_Started"
-                    android:fontFamily="sans-serif-medium"
-                    android:textStyle="normal"
-                    android:textColor="#ffffff"
-                    android:textSize="15.2sp"/>
-
-            <ProgressBar
-                    android:id="@+id/login_progress"
-                    style="?android:attr/progressBarStyleLarge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:visibility="gone"/>
-
-            <EditText
-                    android:id="@+id/emailSignIn"
-                    android:layout_width="276.3dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40.7dp"
-                    android:layout_marginTop="251.7dp"
-                    android:hint="@string/email"
-                    android:theme="@style/MyEditTextTheme"
-                    android:textSize="11.2sp"
-                    android:inputType="textEmailAddress"
-                    android:text="@={viewModel.credential.email}"
-                    android:textColor="@color/color_white"
-                    android:textColorHint="@color/color_white"
-                    android:fontFamily="sans-serif-medium"
-                    android:textStyle="normal"
-                    android:drawableLeft="@drawable/image_email"
-                    android:drawablePadding="10dp"
-            />
-
-            <EditText
-                    android:id="@+id/passwordSignIn"
-                    android:layout_width="276.3dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="40.7dp"
-                    android:layout_marginTop="294dp"
-                    android:hint="@string/password"
-                    android:theme="@style/MyEditTextTheme"
-                    android:textSize="11.2sp"
-                    android:inputType="textPassword"
-                    android:text="@={viewModel.credential.password}"
-                    android:textColor="@color/color_white"
-                    android:textColorHint="@color/color_white"
-                    android:fontFamily="sans-serif-medium"
-                    android:textStyle="normal"
-                    android:drawableLeft="@drawable/image_password"
-                    android:drawablePadding="10dp"
-            />
-
-            <Button
-                    android:id="@+id/loginButton"
-                    android:layout_width="278dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="41dp"
-                    android:layout_marginStart="41dp"
-                    android:layout_marginTop="339.7dp"
-                    android:background="@drawable/signup_button_image"
-                    android:padding="0dp"
-                    android:onClick="@{() -> viewModel.signUp()}"
-                    android:text="@string/log_in"
-                    android:textAllCaps="false"
-                    android:textColor="#ffffff"
-                    android:textStyle="bold"/>
-        </FrameLayout>-->
+        <Button
+            android:id="@+id/SignUpConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="41dp"
+            android:layout_marginEnd="40.7dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/signup_button_image"
+            android:padding="0dp"
+            android:text="@string/sign_up"
+            android:onClick="@{(v) -> viewModel.onClick(v)}"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PasswordSignUp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
