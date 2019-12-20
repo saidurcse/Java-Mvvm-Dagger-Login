@@ -15,6 +15,8 @@ import javax.inject.Inject;
 import saidur.demo.app.R;
 import saidur.demo.app.databinding.ActivitySplashBinding;
 import saidur.demo.app.model.ObjectManager;
+import saidur.demo.app.view.login.LoginActivity;
+import saidur.demo.app.view.signup.SignupActivity;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -53,9 +55,9 @@ public class SplashActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            //Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-            //startActivity(intent);
-            //finish();
+            Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 

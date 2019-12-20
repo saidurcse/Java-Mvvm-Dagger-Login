@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="saidur.demo.app.view.signup.view.SignupViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_launcher_background">
+
+        <!--<FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/frameLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                    android:layout_width="303.7dp"
+                    android:layout_height="497dp"
+                    android:layout_marginBottom="48.3dp"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginStart="35.3dp"
+                    android:layout_marginTop="94.7dp"
+                    android:background="@drawable/dolphin_logo"/>
+
+            <ImageView
+                    android:layout_width="165.3dp"
+                    android:layout_height="56.3dp"
+                    android:layout_marginBottom="471dp"
+                    android:layout_marginEnd="101.3dp"
+                    android:layout_marginStart="93.3dp"
+                    android:layout_marginTop="112.7dp"
+                    android:background="@drawable/tibot_logo"/>
+
+            <TextView
+                    android:layout_width="169.7dp"
+                    android:layout_height="19.7dp"
+                    android:layout_marginEnd="98.7dp"
+                    android:layout_marginStart="97.7dp"
+                    android:layout_marginTop="192dp"
+                    android:text="@string/Sign_in_to_Get_Started"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:textColor="#ffffff"
+                    android:textSize="15.2sp"/>
+
+            <ProgressBar
+                    android:id="@+id/login_progress"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+            <EditText
+                    android:id="@+id/emailSignIn"
+                    android:layout_width="276.3dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40.7dp"
+                    android:layout_marginTop="251.7dp"
+                    android:hint="@string/email"
+                    android:theme="@style/MyEditTextTheme"
+                    android:textSize="11.2sp"
+                    android:inputType="textEmailAddress"
+                    android:text="@={viewModel.credential.email}"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_white"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:drawableLeft="@drawable/image_email"
+                    android:drawablePadding="10dp"
+            />
+
+            <EditText
+                    android:id="@+id/passwordSignIn"
+                    android:layout_width="276.3dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40.7dp"
+                    android:layout_marginTop="294dp"
+                    android:hint="@string/password"
+                    android:theme="@style/MyEditTextTheme"
+                    android:textSize="11.2sp"
+                    android:inputType="textPassword"
+                    android:text="@={viewModel.credential.password}"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_white"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:drawableLeft="@drawable/image_password"
+                    android:drawablePadding="10dp"
+            />
+
+            <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="278dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="41dp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="339.7dp"
+                    android:background="@drawable/signup_button_image"
+                    android:padding="0dp"
+                    android:onClick="@{() -> viewModel.signUp()}"
+                    android:text="@string/log_in"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"/>
+        </FrameLayout>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
