@@ -1,5 +1,6 @@
 package saidur.demo.app.view.signup;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Window;
@@ -18,6 +19,7 @@ import saidur.demo.app.DemoApplication;
 import saidur.demo.app.R;
 import saidur.demo.app.database.DatabaseSingleton;
 import saidur.demo.app.databinding.ActivitySignupBinding;
+import saidur.demo.app.view.login.LoginActivity;
 import saidur.demo.app.view.signup.model.SignupRequest;
 import saidur.demo.app.view.signup.view.SignupViewModel;
 import saidur.demo.app.view.signup.view.SignupViewModel_MembersInjector;
@@ -70,6 +72,9 @@ public class SignupActivity extends AppCompatActivity {
                     //binding.PasswordSignUp.setText(signupRequest.getPassword());
                     SignupRequest signupUser = new SignupRequest(signupRequest.getEmail(), signupRequest.getPassword());
                     DatabaseSingleton.GetDatabase(getApplicationContext()).signupDAO().AddUser(signupUser);
+
+                    Intent login = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(login);
                 }
             }
         });
