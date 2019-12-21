@@ -8,6 +8,6 @@ import saidur.demo.app.view.signup.model.SignupRequest;
 
 @Database(entities = {SignupRequest.class} , version = 1, exportSchema = false)
 public abstract class MyAppDataBase extends RoomDatabase {
-    public abstract SignupDAO leadsDAO();
+    public abstract SignupDAO signupDAO();
 }
 

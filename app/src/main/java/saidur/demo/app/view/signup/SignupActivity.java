@@ -16,6 +16,7 @@ import java.util.Objects;
 
 import saidur.demo.app.DemoApplication;
 import saidur.demo.app.R;
+import saidur.demo.app.database.DatabaseSingleton;
 import saidur.demo.app.databinding.ActivitySignupBinding;
 import saidur.demo.app.view.signup.model.SignupRequest;
 import saidur.demo.app.view.signup.view.SignupViewModel;
@@ -65,8 +66,10 @@ public class SignupActivity extends AppCompatActivity {
                     binding.PasswordSignUp.setError("Enter at least 6 Digit password");
                     binding.PasswordSignUp.requestFocus();
                 } else {
-                    binding.EmailSignUp.setText(signupRequest.getEmail());
-                    binding.PasswordSignUp.setText(signupRequest.getPassword());
+                    //binding.EmailSignUp.setText(signupRequest.getEmail());
+                    //binding.PasswordSignUp.setText(signupRequest.getPassword());
+                    SignupRequest signupUser = new SignupRequest(signupRequest.getEmail(), signupRequest.getPassword());
+                    DatabaseSingleton.GetDatabase(getApplicationContext()).signupDAO().AddUser(signupUser);
                 }
             }
         });

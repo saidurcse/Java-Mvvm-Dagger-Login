@@ -7,7 +7,7 @@ import saidur.demo.app.view.signup.view.SignupViewModel;
 
 @SignupScope
 @Component(dependencies = DemoComponent.class, modules = {SignupModule.class})
-public interface SignupComponent extends LoginGraph{
+public interface SignupComponent extends SignupGraph{
 
     void inject(SignupActivity signupActivity);
 

@@ -5,7 +5,9 @@ import android.view.View;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
 import javax.inject.Inject;
+
 import saidur.demo.app.util.SharedPrefsHelper;
 import saidur.demo.app.view.signup.model.SignupRequest;
 
