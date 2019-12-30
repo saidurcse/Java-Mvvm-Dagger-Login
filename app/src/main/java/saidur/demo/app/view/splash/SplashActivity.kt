@@ -25,7 +25,7 @@ class SplashActivity : AppCompatActivity() {
     private var binding: ActivitySplashBinding? = null
 
     @Inject
-    internal var objectManager: ObjectManager? = null
+    lateinit var objectManager: ObjectManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)

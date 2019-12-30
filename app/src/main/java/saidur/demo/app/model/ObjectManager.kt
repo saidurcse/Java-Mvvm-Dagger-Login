@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 import com.google.gson.Gson
 
 
-class ObjectManager(private val sharedPreferences: SharedPreferences, private val gson: Gson) {
+class ObjectManager(val sharedPreferences: SharedPreferences, val gson: Gson) {
 
     fun save(key: String, o: Any) {
         sharedPreferences.edit()

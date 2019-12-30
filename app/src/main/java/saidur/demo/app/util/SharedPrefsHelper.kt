@@ -5,11 +5,11 @@ import android.content.SharedPreferences
 
 class SharedPrefsHelper(context: Context) {
 
-    private val mSharedPreferences: SharedPreferences
-    private val TbbdPref = "demo-prefs"
+    val mSharedPreferences: SharedPreferences
+    val DemoPref = "demo-prefs"
 
     init {
-        this.mSharedPreferences = context.getSharedPreferences(TbbdPref, Context.MODE_PRIVATE)
+        this.mSharedPreferences = context.getSharedPreferences(DemoPref, Context.MODE_PRIVATE)
     }
 
     fun put(key: String, value: String) {

@@ -13,9 +13,9 @@ import saidur.demo.app.view.login.model.LoginRequest
 
 class LoginViewModel : ViewModel() {
     @Inject
-    internal var sharedPrefsHelper: SharedPrefsHelper? = null
+    lateinit var sharedPrefsHelper: SharedPrefsHelper
     @Inject
-    var context: Context? = null
+    lateinit var context: Context
 
     var email = MutableLiveData<String>()
     var password = MutableLiveData<String>()
