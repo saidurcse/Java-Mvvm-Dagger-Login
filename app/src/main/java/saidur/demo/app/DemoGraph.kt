@@ -5,7 +5,7 @@ import saidur.demo.app.retrofit.endpoint.DemoEndPoint
 
 interface DemoGraph {
 
-    fun retrofit(): Retrofit
+    //fun retrofit(): Retrofit
 
-    fun endPoint(): DemoEndPoint
+    //fun endPoint(): DemoEndPoint
 }
