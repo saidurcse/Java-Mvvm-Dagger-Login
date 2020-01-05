@@ -22,7 +22,6 @@ public class LoginViewModel extends ViewModel {
 
     private MutableLiveData<LoginRequest> userMutableLiveData;
 
-
     public MutableLiveData<LoginRequest> getUser() {
 
         if (userMutableLiveData == null) {
