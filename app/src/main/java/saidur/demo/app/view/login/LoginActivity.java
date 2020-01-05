@@ -1,5 +1,6 @@
 package saidur.demo.app.view.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Window;
@@ -18,6 +19,7 @@ import saidur.demo.app.DemoApplication;
 import saidur.demo.app.R;
 import saidur.demo.app.database.DatabaseSingleton;
 import saidur.demo.app.databinding.ActivityLoginBinding;
+import saidur.demo.app.view.landing.LandingActivity;
 import saidur.demo.app.view.login.model.LoginRequest;
 import saidur.demo.app.view.login.view.LoginViewModel;
 
@@ -69,6 +71,8 @@ public class LoginActivity extends AppCompatActivity {
                     if(loginRequest1.getEmail().equals(loginRequest.getEmail()) && loginRequest1.getPassword().equals(loginRequest.getPassword())){
                         Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG);
                         binding.SignUpConfirm.setText("Success");
+                        Intent openLandingPage = new Intent(LoginActivity.this, LandingActivity.class);
+                        startActivity(openLandingPage);
                     } else{
                         Toast.makeText(getApplicationContext(), "Please check again", Toast.LENGTH_LONG);
                     }
